@@ -103,11 +103,9 @@ class Editor extends React.Component<EditorProps, EditorState> {
 
             grapesjs.editors = grapesjs.editors.filter((e: any) => e !== editor);
 
-            try {
+            setTimeout(() => {
                 editor.destroy();
-            } catch (e) {
-                console.log(e);
-            }
+            }, 0);
 
             if (document) {
                 const container: HTMLDivElement = document.getElementById(id) as HTMLDivElement;
