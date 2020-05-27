@@ -1,14 +1,21 @@
 {
   "name": "react-grapesjs",
   "version": "0.1.0",
+  "homepage": "https://github.com/mikaelim-id/react-grapesjs",
+  "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
   "repository": {
     "url": "https://github.com/mikaelim-id/react-grapesjs",
     "type": "git"
   },
-  "homepage": "https://github.com/mikaelim-id/react-grapesjs",
-  "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
   "author": "Michael L <mikaelim.id@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/react-grapesjs.cjs.js",
+  "module": "./dist/react-grapesjs.js",
+  "types": "./dist/react-grapesjs.d.ts",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -18,9 +25,13 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "node-sass": "^4.14.1",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "rollup": "^2.10.9",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-sass": "^1.2.2",
     "tslint": "^6.1.2",
     "tslint-react": "^5.0.0",
     "typescript": "^3.9.3"
@@ -30,16 +41,24 @@
     "grapesjs-mjml": "^0.1.15",
     "grapesjs-preset-newsletter": "^0.2.20",
     "grapesjs-preset-webpage": "^0.1.11",
-    "react": "^16.13.1"
+    "rollup-plugin-typescript2": "^0.27.1"
   },
   "scripts": {
+    "watch:lib": "rollup -c -w",
+    "build:lib": "rollup -c",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "browserslist": {
     "production": [
@@ -52,5 +71,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

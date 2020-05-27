@@ -25,7 +25,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": false,
     "noUnusedLocals": true,
-    "noUnusedParameters": false,
+    "noUnusedParameters": true,
     "outDir": "dist",
     "removeComments": false,
     "resolveJsonModule": true,
@@ -42,7 +42,8 @@
   "exclude": [
     "build/",
     "dist/",
-    "node_modules/"
+    "node_modules/",
+    "rollup.config.js"
   ],
   "include": [
     "src/app.tsx",
