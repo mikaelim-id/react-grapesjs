@@ -1,7 +1,13 @@
 {
   "name": "react-grapesjs",
   "version": "0.1.0",
-  "private": true,
+  "repository": {
+    "url": "https://github.com/mikaelim-id/react-grapesjs",
+    "type": "git"
+  },
+  "homepage": "https://github.com/mikaelim-id/react-grapesjs",
+  "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
+  "author": "Michael L <mikaelim.id@gmail.com>",
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

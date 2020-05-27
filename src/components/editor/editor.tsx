@@ -12,25 +12,15 @@ const presets: any = {
 
 export interface EditorProps {
     id?: string;
-
     presetType?: 'webpage' | 'newsletter' | 'mjml';
-
     plugins?: string[];
-
-    children?: React.ReactElement<any> | Array<React.ReactElement<any>>;
-
+    children?: React.ReactElement<any> | React.ReactElement<any>[];
     storageManager?: any;
-
     blockManager?: any;
-
     styleManager?: {};
-
     width?: string | number;
-
     height?: string | number;
-
     components?: object[];
-
     blocks?: object[];
 
     onInit?(editor: any): void;
@@ -65,7 +55,7 @@ class Editor extends React.Component<EditorProps, EditorState> {
             storageManager,
             width,
             height,
-            plugins: propPlugins,
+            plugins,
             presetType,
         } = this.props;
 
@@ -79,7 +69,7 @@ class Editor extends React.Component<EditorProps, EditorState> {
             height,
             plugins: [
                 presets[presetType],
-                ...propPlugins,
+                ...plugins,
             ],
         });
 
