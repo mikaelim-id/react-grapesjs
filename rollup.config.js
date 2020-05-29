@@ -1,11 +1,10 @@
 import typescript from "rollup-plugin-typescript2";
-import external from "rollup-plugin-peer-deps-external";
-import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import pkg from "./package.json";
 
 export default {
-    input: "src/app.tsx",
+    input: "src/react-grapesjs.tsx",
     output: [
         {
             file: pkg.main,
@@ -21,7 +20,6 @@ export default {
         },
     ],
     plugins: [
-        external(),
         typescript(),
         resolve(),
         commonjs(),

@@ -46,8 +46,7 @@
     "rollup.config.js"
   ],
   "include": [
-    "src/app.tsx",
-    "src/components",
+    "src/react-grapesjs.tsx",
     "src/types"
   ]
 }

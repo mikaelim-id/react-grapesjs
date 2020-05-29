@@ -16,6 +16,7 @@ vendor/
 coverage/
 /locale/
 node_modules/
+dist/
 bower_components/
 grapesjs-*.tgz
 _index.html
