@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Editor} from './react-grapesjs';
+import './index.scss';
 
 ReactDOM.render(
     <React.StrictMode>
