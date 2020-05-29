@@ -1,6 +1,7 @@
 {
   "name": "react-grapesjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "description": "",
   "homepage": "https://github.com/mikaelim-id/react-grapesjs",
   "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
   "repository": {
@@ -30,8 +31,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "rollup": "^2.10.9",
-    "rollup-plugin-peer-deps-external": "^2.2.2",
-    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.27.1",
     "tslint": "^6.1.2",
     "tslint-react": "^5.0.0",
     "typescript": "^3.9.3"
@@ -40,17 +40,16 @@
     "grapesjs": "^0.16.12",
     "grapesjs-mjml": "^0.1.15",
     "grapesjs-preset-newsletter": "^0.2.20",
-    "grapesjs-preset-webpage": "^0.1.11",
-    "rollup-plugin-typescript2": "^0.27.1"
+    "grapesjs-preset-webpage": "^0.1.11"
   },
   "scripts": {
     "watch:lib": "rollup -c -w",
     "build:lib": "rollup -c",
+    "postbuild:lib": "cp src/types/* dist/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -71,8 +70,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
