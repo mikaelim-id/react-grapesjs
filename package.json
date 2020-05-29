@@ -1,6 +1,6 @@
 {
   "name": "react-grapesjs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "",
   "homepage": "https://github.com/mikaelim-id/react-grapesjs",
   "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
@@ -11,7 +11,7 @@
   "author": "Michael L <mikaelim.id@gmail.com>",
   "license": "MIT",
   "private": false,
-  "main": "./dist/react-grapesjs.cjs.js",
+  "main": "./dist/react-grapesjs.min.js",
   "module": "./dist/react-grapesjs.js",
   "types": "./dist/react-grapesjs.d.ts",
   "devDependencies": {
@@ -31,6 +31,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "rollup": "^2.10.9",
+    "rollup-plugin-postcss": "^3.1.1",
     "rollup-plugin-typescript2": "^0.27.1",
     "tslint": "^6.1.2",
     "tslint-react": "^5.0.0",
