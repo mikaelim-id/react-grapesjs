@@ -13,13 +13,12 @@ const presets: any = {
 export interface EditorProps {
     id?: string;
     presetType?: 'webpage' | 'newsletter' | 'mjml';
-    plugins?: string[];
-    children?: React.ReactElement<any> | React.ReactElement<any>[];
+    width?: string | number;
+    height?: string | number;
+    children?: React.ReactElement | React.ReactElement[];
     storageManager?: any;
     blockManager?: any;
     styleManager?: {};
-    width?: string | number;
-    height?: string | number;
     components?: object[];
     blocks?: object[];
 
@@ -36,40 +35,34 @@ class Editor extends React.Component<EditorProps, EditorState> {
     public static defaultProps: EditorProps = {
         id: 'gjs',
         presetType: 'newsletter',
-        plugins: [],
-        blocks: [],
+        width: 'auto',
+        height: '100vh',
         blockManager: {},
         storageManager: {},
         styleManager: {},
-        width: 'auto',
-        height: '100vh',
         components: [],
     };
 
     public componentDidMount(): void {
         const {
-            onInit,
             id,
-            blockManager,
-            styleManager,
-            storageManager,
             width,
             height,
-            plugins,
+            styleManager,
+            storageManager,
             presetType,
+            onInit,
         } = this.props;
 
         const editor = grapesjs.init({
             container: `#${id}`,
             fromElement: true,
-            blockManager,
-            styleManager,
-            storageManager,
             width,
             height,
+            styleManager,
+            storageManager,
             plugins: [
                 presets[presetType],
-                ...plugins,
             ],
         });
 
@@ -91,8 +84,6 @@ class Editor extends React.Component<EditorProps, EditorState> {
                 onDestroy(editor);
             }
 
-            grapesjs.editors = grapesjs.editors.filter((e: any) => e !== editor);
-
             setTimeout(() => {
                 editor.destroy();
             }, 0);
@@ -107,7 +98,7 @@ class Editor extends React.Component<EditorProps, EditorState> {
     }
 
     public render() {
-        const {children, id} = this.props;
+        const {id, children} = this.props;
 
         return (
             <div id={id}>

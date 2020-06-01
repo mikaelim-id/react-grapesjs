@@ -6,7 +6,7 @@ import './index.scss';
 ReactDOM.render(
     <React.StrictMode>
         <Editor>
-            <div>Default editor contents here!</div>
+            <h1>Hello World Component!</h1>
         </Editor>
     </React.StrictMode>,
     document.getElementById('root'),

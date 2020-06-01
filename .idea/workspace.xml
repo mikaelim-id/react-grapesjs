@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="64af4c14-8155-42bf-86f6-8a56f1be5c3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/editor/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor/editor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-grapesjs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-grapesjs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/grapesjs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/grapesjs.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,14 +41,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/types/editor" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/node_modules/grapesjs/dist" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.Editor.renders without crashing">
@@ -96,7 +96,10 @@
       <updated>1590388705907</updated>
       <workItem from="1590388708223" duration="8976000" />
       <workItem from="1590422141302" duration="16281000" />
-      <workItem from="1590729941486" duration="9517000" />
+      <workItem from="1590729941486" duration="10450000" />
+      <workItem from="1590759538854" duration="381000" />
+      <workItem from="1590980131662" duration="2073000" />
+      <workItem from="1590982403921" duration="5646000" />
     </task>
     <servers />
   </component>
@@ -111,26 +114,30 @@
       <screen x="46" y="23" width="1234" height="777" />
     </state>
     <state x="149" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/46.23.1234.777@46.23.1234.777" timestamp="1590585790874" />
-    <state x="146" y="123" width="531" height="577" key="DiffContextDialog" timestamp="1590586086759">
+    <state x="146" y="123" width="531" height="577" key="DiffContextDialog" timestamp="1590983252513">
       <screen x="46" y="23" width="1234" height="777" />
     </state>
-    <state x="146" y="123" width="531" height="577" key="DiffContextDialog/46.23.1234.777@46.23.1234.777" timestamp="1590586086759" />
-    <state width="1057" height="279" key="GridCell.Tab.0.bottom" timestamp="1590747898947">
+    <state x="146" y="123" width="531" height="577" key="DiffContextDialog/46.23.1234.777@46.23.1234.777" timestamp="1590983252513" />
+    <state x="315" y="197" key="EditFileWatcherDialog" timestamp="1590991532024">
+      <screen x="46" y="23" width="1234" height="777" />
+    </state>
+    <state x="315" y="197" key="EditFileWatcherDialog/46.23.1234.777@46.23.1234.777" timestamp="1590991532024" />
+    <state width="1057" height="279" key="GridCell.Tab.0.bottom" timestamp="1590759394401">
       <screen x="1280" y="-42" width="1920" height="1057" />
     </state>
-    <state width="1057" height="279" key="GridCell.Tab.0.bottom/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590747898947" />
-    <state width="1057" height="279" key="GridCell.Tab.0.center" timestamp="1590747898946">
+    <state width="1057" height="279" key="GridCell.Tab.0.bottom/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590759394401" />
+    <state width="1057" height="279" key="GridCell.Tab.0.center" timestamp="1590759394398">
       <screen x="1280" y="-42" width="1920" height="1057" />
     </state>
-    <state width="1057" height="279" key="GridCell.Tab.0.center/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590747898946" />
-    <state width="1057" height="279" key="GridCell.Tab.0.left" timestamp="1590747898945">
+    <state width="1057" height="279" key="GridCell.Tab.0.center/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590759394398" />
+    <state width="1057" height="279" key="GridCell.Tab.0.left" timestamp="1590759394394">
       <screen x="1280" y="-42" width="1920" height="1057" />
     </state>
-    <state width="1057" height="279" key="GridCell.Tab.0.left/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590747898945" />
-    <state width="1057" height="279" key="GridCell.Tab.0.right" timestamp="1590747898946">
+    <state width="1057" height="279" key="GridCell.Tab.0.left/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590759394394" />
+    <state width="1057" height="279" key="GridCell.Tab.0.right" timestamp="1590759394398">
       <screen x="1280" y="-42" width="1920" height="1057" />
     </state>
-    <state width="1057" height="279" key="GridCell.Tab.0.right/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590747898946" />
+    <state width="1057" height="279" key="GridCell.Tab.0.right/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590759394398" />
     <state x="158" y="121" key="RollbackChangesDialog" timestamp="1590586051533">
       <screen x="46" y="23" width="1234" height="777" />
     </state>
@@ -140,5 +147,9 @@
     </state>
     <state x="1378" y="153" width="940" height="667" key="find.popup/46.23.1234.777/1280.-42.1920.1057@1280.-42.1920.1057" timestamp="1590746971732" />
     <state x="109" y="166" width="604" height="490" key="find.popup/46.23.1234.777@46.23.1234.777" timestamp="1590591128891" />
+    <state x="328" y="186" key="run.anything.popup" timestamp="1590991734788">
+      <screen x="46" y="23" width="1234" height="777" />
+    </state>
+    <state x="328" y="186" key="run.anything.popup/46.23.1234.777@46.23.1234.777" timestamp="1590991734788" />
   </component>
 </project>
