@@ -16,11 +16,11 @@ export interface EditorProps {
     width?: string | number;
     height?: string | number;
     children?: React.ReactElement | React.ReactElement[];
-    storageManager?: any;
     blockManager?: any;
+    storageManager?: any;
     styleManager?: {};
-    components?: object[];
     blocks?: object[];
+    components?: object[];
 
     onInit?(editor: any): void;
 
@@ -34,12 +34,13 @@ interface EditorState {
 class Editor extends React.Component<EditorProps, EditorState> {
     public static defaultProps: EditorProps = {
         id: 'gjs',
-        presetType: 'newsletter',
+        presetType: 'webpage',
         width: 'auto',
         height: '100vh',
         blockManager: {},
         storageManager: {},
         styleManager: {},
+        blocks: [],
         components: [],
     };
 
@@ -48,8 +49,9 @@ class Editor extends React.Component<EditorProps, EditorState> {
             id,
             width,
             height,
-            styleManager,
+            blockManager,
             storageManager,
+            styleManager,
             presetType,
             onInit,
         } = this.props;
@@ -59,8 +61,9 @@ class Editor extends React.Component<EditorProps, EditorState> {
             fromElement: true,
             width,
             height,
-            styleManager,
+            blockManager,
             storageManager,
+            styleManager,
             plugins: [
                 presets[presetType],
             ],
