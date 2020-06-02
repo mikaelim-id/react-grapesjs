@@ -392,6 +392,7 @@ declare module 'grapesjs' {
         keepUnusedStyles?: boolean;
         multiFrames?: boolean;
         plugins?: object[];
+        pluginsOpts?: object;
     }
 
     interface AssetManagerConfig {

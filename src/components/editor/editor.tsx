@@ -1,5 +1,4 @@
 import grapesjs from 'grapesjs';
-import mjml from 'grapesjs-mjml';
 import newsletter from 'grapesjs-preset-newsletter';
 import webpage from 'grapesjs-preset-webpage';
 import React from 'react';
@@ -7,12 +6,11 @@ import React from 'react';
 const presets: any = {
     webpage,
     newsletter,
-    mjml,
 };
 
 export interface EditorProps {
     id?: string;
-    presetType?: 'webpage' | 'newsletter' | 'mjml';
+    presetType?: 'webpage' | 'newsletter';
     width?: string | number;
     height?: string | number;
     children?: React.ReactElement | React.ReactElement[];
@@ -22,9 +20,11 @@ export interface EditorProps {
     blocks?: object[];
     components?: object[];
 
-    onInit?(editor: any): void;
+    onInit?(editor: grapesjs.Editor): void;
 
-    onDestroy?(editor: any): void;
+    onDestroy?(editor: grapesjs.Editor): void;
+
+    onUpdate?(editor: grapesjs.Editor): void;
 }
 
 interface EditorState {
@@ -73,6 +73,8 @@ class Editor extends React.Component<EditorProps, EditorState> {
             onInit(editor);
         }
 
+        editor.on('change:changesCount', this.handleOnUpdate.bind(this));
+
         this.setState({
             editor,
         });
@@ -83,13 +85,13 @@ class Editor extends React.Component<EditorProps, EditorState> {
         const {onDestroy, id} = this.props;
 
         if (editor) {
-            if (typeof onDestroy === 'function') {
-                onDestroy(editor);
-            }
-
             setTimeout(() => {
                 editor.destroy();
             }, 0);
+
+            if (typeof onDestroy === 'function') {
+                onDestroy(editor);
+            }
 
             if (document) {
                 const container: HTMLDivElement = document.getElementById(id) as HTMLDivElement;
@@ -98,6 +100,11 @@ class Editor extends React.Component<EditorProps, EditorState> {
                 }
             }
         }
+    }
+
+
+    public handleOnUpdate(): void {
+        this.props.onUpdate(this.state.editor);
     }
 
     public render() {
