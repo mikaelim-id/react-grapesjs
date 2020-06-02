@@ -85,13 +85,13 @@ class Editor extends React.Component<EditorProps, EditorState> {
         const {onDestroy, id} = this.props;
 
         if (editor) {
-            setTimeout(() => {
-                editor.destroy();
-            }, 0);
-
             if (typeof onDestroy === 'function') {
                 onDestroy(editor);
             }
+
+            setTimeout(() => {
+                editor.destroy();
+            }, 0);
 
             if (document) {
                 const container: HTMLDivElement = document.getElementById(id) as HTMLDivElement;
