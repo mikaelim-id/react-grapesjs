@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64af4c14-8155-42bf-86f6-8a56f1be5c3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/editor/editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor/editor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/grapesjs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/grapesjs.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/grapesjs-mjml.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,10 +111,10 @@
       <screen x="46" y="23" width="1234" height="777" />
     </state>
     <state x="149" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/46.23.1234.777@46.23.1234.777" timestamp="1590585790874" />
-    <state x="146" y="123" width="531" height="577" key="DiffContextDialog" timestamp="1590983252513">
+    <state x="146" y="123" width="531" height="577" key="DiffContextDialog" timestamp="1591096202763">
       <screen x="46" y="23" width="1234" height="777" />
     </state>
-    <state x="146" y="123" width="531" height="577" key="DiffContextDialog/46.23.1234.777@46.23.1234.777" timestamp="1590983252513" />
+    <state x="146" y="123" width="531" height="577" key="DiffContextDialog/46.23.1234.777@46.23.1234.777" timestamp="1591096202763" />
     <state x="315" y="197" key="EditFileWatcherDialog" timestamp="1590991532024">
       <screen x="46" y="23" width="1234" height="777" />
     </state>

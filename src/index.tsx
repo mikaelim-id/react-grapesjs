@@ -5,9 +5,7 @@ import './index.scss';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Editor presetType={'webpage'} onUpdate={(ed) => {
-            console.log(ed.getHtml());
-        }}>
+        <Editor presetType={'webpage'}>
             <h1>Hello World Component!</h1>
         </Editor>
     </React.StrictMode>,
