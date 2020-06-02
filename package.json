@@ -8,6 +8,7 @@
     "url": "https://github.com/mikaelim-id/react-grapesjs",
     "type": "git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": "Michael L <mikaelim.id@gmail.com>",
   "license": "MIT",
   "private": false,
