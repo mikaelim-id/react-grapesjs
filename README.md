@@ -28,6 +28,6 @@ yarn start
 ```
 
 ## Hooks
-- *onInit* : called after editor is initialized.
-- *onDestroy* : called before editor is destroyed.
-- *onUpdate* : called on every change in editor.
+- **onInit** : called after editor is initialized.
+- **onDestroy** : called before editor is destroyed.
+- **onUpdate** : called on every change in editor.
