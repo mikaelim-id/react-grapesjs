@@ -1,6 +1,6 @@
 {
   "name": "react-grapesjs",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "",
   "homepage": "https://github.com/mikaelim-id/react-grapesjs",
   "bugs": "https://github.com/mikaelim-id/react-grapesjs/issues",
@@ -8,7 +8,9 @@
     "url": "https://github.com/mikaelim-id/react-grapesjs",
     "type": "git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "Michael L <mikaelim.id@gmail.com>",
   "license": "MIT",
   "private": false,
