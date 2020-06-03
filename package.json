@@ -57,6 +57,18 @@
       "@babel/preset-react"
     ]
   },
+  "keywords": [
+    "react",
+    "grapesjs",
+    "wrapper",
+    "wysiwyg",
+    "web",
+    "template",
+    "editor",
+    "newsletter",
+    "site",
+    "builder"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
